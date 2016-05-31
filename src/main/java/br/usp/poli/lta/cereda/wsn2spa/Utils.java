@@ -26,6 +26,7 @@ import br.usp.poli.lta.cereda.wirth2ape.exporter.Transition;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import javax.swing.JCheckBox;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Options;
@@ -56,6 +57,7 @@ public class Utils {
         options.addOption("y", "yaml", true, "YAML output");
         options.addOption("c", "convert", false, "DFA conversion");
         options.addOption("m", "minimize", false, "state minimization");
+        options.addOption("g", "gui", false, "open graphical interface");
         return options;
     }
 
@@ -102,11 +104,20 @@ public class Utils {
         }
         return true;
     }
+    
+    public static boolean neither(JCheckBox... checkboxes) {
+        for (JCheckBox box : checkboxes) {
+            if (box.isSelected()) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     public static void printHelp() {
         HelpFormatter formatter = new HelpFormatter();
         formatter.printHelp("wsn2spa -o <pattern> -y"
-                + " <pattern> [ -c ] [ -m ]", getOptions());
+                + " <pattern> [ -c ] [ -m ] [-g ]", getOptions());
         System.exit(0);
     }
 

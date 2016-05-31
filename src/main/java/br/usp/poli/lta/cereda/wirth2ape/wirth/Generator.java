@@ -282,8 +282,8 @@ public class Generator {
         
         if (!result) {
             throw new Exception("There were errors while trying to perform "
-                    + "lexical analysis on the provided file. Make sure the"
-                    + "grammar is correct (valid Wirth syntax notation) and"
+                    + "lexical analysis on the provided file. Make sure the "
+                    + "grammar is correct (valid Wirth syntax notation) and "
                     + "try again.");
         }
         
