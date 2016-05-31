@@ -27,3 +27,7 @@ include the replacement pattern '%s' in order to generate files
 corresponding to each submachine in the automaton model.
 ----------------------------------------------------------------------
 ```
+
+Graphical interface:
+
+![WSN2SPA](http://i.imgur.com/fnQZK2v.png)
